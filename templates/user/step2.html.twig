@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+
+    <div class="flex justify-between items-center">
+        <a href="{{ path('app_user_new', {step: '1'}) }}"
+            class="btn btn-secondary">
+            back
+        </a>
+        <button type="submit"
+                class="btn btn-primary">
+            Next
+        </button>
+    </div>
+
+{{ form_end(form) }}
+
+{% endblock %}
